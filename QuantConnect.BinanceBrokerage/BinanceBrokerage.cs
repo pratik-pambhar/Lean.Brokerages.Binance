@@ -551,7 +551,7 @@ namespace QuantConnect.BinanceBrokerage
                 Connect();
             };
 
-            ValidateSubscription();
+            //ValidateSubscription();
         }
 
         /// <summary>

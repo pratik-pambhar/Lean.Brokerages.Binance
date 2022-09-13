@@ -29,6 +29,8 @@ namespace QuantConnect.BinanceBrokerage.ToolBox
 {
     static class Program
     {
+        //--app=binancedownloader --tickers=ETHUSDT --resolution=Daily --from-date=20220101-00:00:00 --to-date=20220201-00:00:00
+        //--app=kc --tickers=HDFCBANK,DMART,YESBANK,ICICIBANK,DHFL,IDEA,INFY,MARUTI,ONGC,RELIANCE,SOUTHBANK,TCS,WIPRO,ZEEL,IDFCFIRSTB --resolution=Daily --from-date=20150101-00:00:00 --to-date=20191230-00:00:00
         static void Main(string[] args)
         {
             var optionsObject = ToolboxArgumentParser.ParseArguments(args);
