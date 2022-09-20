@@ -29,7 +29,7 @@ namespace QuantConnect.BinanceBrokerage.ToolBox
 {
     static class Program
     {
-        //--app=binancedownloader --tickers=ETHUSDT --resolution=Daily --from-date=20220101-00:00:00 --to-date=20220201-00:00:00
+        //--app=binancedownloader --tickers=BTCUSDT --resolution=Minute --from-date=20210101-00:00:00 --to-date=20210131-00:00:00
         //--app=kc --tickers=HDFCBANK,DMART,YESBANK,ICICIBANK,DHFL,IDEA,INFY,MARUTI,ONGC,RELIANCE,SOUTHBANK,TCS,WIPRO,ZEEL,IDFCFIRSTB --resolution=Daily --from-date=20150101-00:00:00 --to-date=20191230-00:00:00
         static void Main(string[] args)
         {
@@ -109,7 +109,8 @@ namespace QuantConnect.BinanceBrokerage.ToolBox
                 var castResolution = allResolutions ? Resolution.Minute : (Resolution)Enum.Parse(typeof(Resolution), resolution);
 
                 // Load settings from config.json
-                var dataDirectory = Config.Get("data-folder", "../../../Data");
+                var dataDirectory = Config.Get("binance-data-download-folder", "../../../../Lean/Data");
+                //var dataDirectory = "../../../../Lean/Data";
 
                 foreach (var ticker in tickers)
                 {
